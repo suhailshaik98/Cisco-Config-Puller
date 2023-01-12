@@ -1,0 +1,128 @@
+
+iosblackarrow>terminal length 0
+iosblackarrow>enable
+Password: 
+iosblackarrow#show run
+Building configuration...
+
+Current configuration : 2509 bytes
+!
+! Last configuration change at 12:04:36 UTC Mon Jan 2 2006 by admin
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname iosblackarrow
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$RyAK$9JO10ykI4I2jc8zpnaPyj.
+!
+no aaa new-model
+memory-size iomem 10
+crypto pki token default removal timeout 0
+!
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name router
+ip cef
+!
+!
+license udi pid CISCO861-K9 sn FCZ1638C5Q1
+!
+!
+username mark password 7 096E42081A0E1600190313787B757A
+username admin password 7 096E42081A0E1600190313787B757A
+!
+!
+ip ssh version 2
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0
+ no ip address
+!
+interface FastEthernet1
+ no ip address
+!
+interface FastEthernet2
+ no ip address
+!
+interface FastEthernet3
+ no ip address
+!
+interface FastEthernet4
+ ip address 20.19.19.1 255.255.255.192
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ ip address 10.0.2.50 255.255.255.0
+!
+interface Vlan50
+ ip address 10.0.1.40 255.255.255.0
+!
+interface Vlan60
+ ip address 60.19.200.1 255.255.255.192
+!
+interface Vlan100
+ no ip address
+ shutdown
+!
+interface Vlan200
+ ip address 20.19.200.1 255.255.255.192
+!
+router rip
+ network 10.0.0.0
+ network 20.0.0.0
+ neighbor 20.19.19.2
+ neighbor 10.90.90.169
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!
+no cdp run
+banner motd ^CCC
+:::::::::  :::            :::      ::::::::  :::    :::          :::     :::::::::  :::::::::   ::::::::  :::       ::: 
+:+:    :+: :+:          :+: :+:   :+:    :+: :+:   :+:         :+: :+:   :+:    :+: :+:    :+: :+:    :+: :+:       :+: 
++:+    +:+ +:+         +:+   +:+  +:+        +:+  +:+         +:+   +:+  +:+    +:+ +:+    +:+ +:+    +:+ +:+       +:+ 
++#++:++#+  +#+        +#++:++#++: +#+        +#++:++         +#++:++#++: +#++:++#:  +#++:++#:  +#+    +:+ +#+  +:+  +#+ 
++#+    +#+ +#+        +#+     +#+ +#+        +#+  +#+        +#+     +#+ +#+    +#+ +#+    +#+ +#+    +#+ +#+ +#+#+ +#+ 
+#+#    #+# #+#        #+#     #+# #+#    #+# #+#   #+#       #+#     #+# #+#    #+# #+#    #+# #+#    #+#  #+#+# #+#+#  
+#########  ########## ###     ###  ########  ###    ###      ###     ### ###    ### ###    ###  ########    ###   ###   
+^C
+!
+line con 0
+ exec-timeout 0 0
+ password 7 13271B1308070538392B3F61657341
+ logging synchronous
+ login local
+line aux 0
+line vty 0 4
+ exec-timeout 15 0
+ privilege level 15
+ password 7 00261F0707500A141D2E5B1C594857
+ logging synchronous
+ login local
+ transport input telnet
+!
+end
+
+iosblackarrow#exit
