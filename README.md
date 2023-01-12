@@ -8,7 +8,7 @@ When writing configurations, many network engineers will always keep a backup of
 
 •	The network engineer will have to use the console screen to copy by manually dragging the cursor (There could be more than 100 lines of configuration code in some cases), copying it for every switch and router, and pasting it into a text file.
 
-## How does this program solve the problem?
+### How does this program solve the problem?
 This program provides a Graphical User Interface (GUI) for the network engineer, where he/she would have to enter the following details such as:
 
 •	Username
@@ -36,3 +36,6 @@ It has been tested only for a single cisco switch, but it is assumed it will wor
 The exe file is provided here 
 
 https://github.com/suhailshaik98/Cisco-Config-Puller/blob/main/CiscoShowConfig/test.exe
+
+The test output has been provided here
+https://github.com/suhailshaik98/Cisco-Config-Puller/blob/main/CiscoShowConfig/suhail.txt
