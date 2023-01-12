@@ -31,7 +31,7 @@ It has been tested only for a single cisco switch, but it is assumed it will wor
 
 •	Improvement can be made in providing more output about the process that is being done
 
-* The network engineer/ technician will need telnet access and this does not work with a console port.
+•	The network engineer/ technician will need telnet access and this does not work with a console port.
 
 The exe file is provided here 
 
