@@ -30,3 +30,9 @@ It has been tested only for a single cisco switch, but it is assumed it will wor
 •	It does not provide any feedback if the file had been successfully created or not
 
 •	Improvement can be made in providing more output about the process that is being done
+
+* The network engineer/ technician will need telnet access and this does not work with a console port.
+
+The exe file is provided here 
+
+https://github.com/suhailshaik98/Cisco-Config-Puller/blob/main/CiscoShowConfig/test.exe
